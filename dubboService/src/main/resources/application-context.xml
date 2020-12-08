@@ -10,6 +10,7 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <dubbo:protocol name="dubbo" port="20880"/>
     <bean id="ordersService" class="org.dubboService.service.impl.OrdersServiceImpl"/>
-    <dubbo:service interface="org.dubboService.service.OrdersService" ref="ordersService"/>
-
+    <dubbo:service interface="org.dubboService.service.OrdersService" ref="ordersService" protocol="dubbo">
+    	<dubbo:method name="getOrderDesc" cache="lru" />
+    </dubbo:service>
 </beans>

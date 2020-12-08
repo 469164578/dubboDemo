@@ -14,10 +14,12 @@
 
     <mvc:annotation-driven/>
     <context:component-scan base-package="org.dubboService.controller"/>
+    
+    <dubbo:consumer check="false"/>
     <dubbo:application name="dubboClient"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <dubbo:protocol name="dubbo" port="20880"/>
     <dubbo:reference id="ordersService" interface="org.dubboService.service.OrdersService">
-        <dubbo:method name="getOrderDesc"></dubbo:method>
+    	<dubbo:method name="getOrderDesc" cache="lru" />
     </dubbo:reference>
 </beans>
