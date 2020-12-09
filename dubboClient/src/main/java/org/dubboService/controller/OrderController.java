@@ -1,6 +1,5 @@
 package org.dubboService.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import org.dubboService.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
