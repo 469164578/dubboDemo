@@ -14,6 +14,6 @@ public class OrdersServiceImpl implements OrdersService {
     @Override
     public String getOrderDesc(String tid) {
         System.out.println("调用了 server getOrderDesc");
-        return "当前订单信息tid："+tid;
+        return "我再自service2当前订单信息tid："+tid;
     }
 }
