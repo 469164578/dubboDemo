@@ -6,4 +6,6 @@ package org.dubboService.service;
  */
 public interface OrdersService {
     String getOrderDesc(String tid);
+    
+    String getLogistics(String tid);
 }

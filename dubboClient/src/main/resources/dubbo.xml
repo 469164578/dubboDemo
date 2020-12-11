@@ -11,7 +11,8 @@
     <dubbo:application name="dubboClient"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
     <dubbo:protocol name="dubbo" port="20880"/>
-    <dubbo:reference id="ordersService" interface="org.dubboService.service.OrdersService" cluster="failover">
-    	<dubbo:method name="getOrderDesc" cache="lru" />
+    <dubbo:reference id="ordersService" interface="org.dubboService.service.OrdersService">
+    	<dubbo:method name="getOrderDesc" async="true"/>
+    	<dubbo:method name="getLogistics" async="true"/>
     </dubbo:reference>
 </beans>

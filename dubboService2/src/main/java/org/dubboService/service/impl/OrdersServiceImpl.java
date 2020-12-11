@@ -16,4 +16,14 @@ public class OrdersServiceImpl implements OrdersService {
         System.out.println("调用了 server getOrderDesc");
         return "我再自service2当前订单信息tid："+tid;
     }
+    
+    @Override
+	public String getLogistics(String tid) {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "订单tid："+tid+";物流信息";
+	}
 }
